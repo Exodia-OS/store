@@ -1,6 +1,6 @@
 # Exodia Store
 
-The **Exodia Store** is your graphical control center for managing software on **Exodia OS**. Built specifically for our Arch-based distribution, it makes installing, updating, and removing packages simple and intuitive.
+**Exodia Store** is your graphical control center for managing software on **Exodia OS**. Built specifically for our Arch-based distribution, it makes installing, updating, and removing packages simple and intuitive.
 
 You no longer need to rely solely on the command line!
 
