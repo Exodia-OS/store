@@ -1,0 +1,46 @@
+{
+  "name": "exodia-store",
+  "version": "2.0.0",
+  "description": "Simple graphical package manager for exodia Linux (Arch-based)",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "keywords": [
+    "Electron",
+    "Arch",
+    "Linux",
+    "Package Manager"
+  ],
+  "author": "ٍSaeed Badrelden",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^29.0.0",
+    "electron-builder": "^24.0.0"
+  },
+  "dependencies": {
+  },
+  "build": {
+    "appId": "com.yourcompany.exodiastore",
+    "productName": "Exodia Store",
+    "linux": {
+      "target": ["AppImage"],
+      "category": "Utility",
+      "icon": "assets/icons/app_icon.png",
+      "executableName": "exodia-store"
+    },
+    "directories": {
+      "output": "dist",
+      "buildResources": "assets"
+    },
+    "files": [
+      "**/*",
+      "!node_modules/.",
+      "node_modules/**/*"
+    ],
+    "extraFiles": [
+    ]
+  }
+}
