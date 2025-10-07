@@ -31,7 +31,8 @@ The Exodia Store is a **GUI (Graphical User Interface) package manager**. Its pr
 * **Apply Updates:** Click **Apply Updates** to perform a full system update (`pacman -Syu`) securely through the store's interface.
 
 ---
-Developed by Exodia Team  
-Contributed by Saeed Badreldin (Helwan Linux)
+## Credits
+Developed by Saeed Badreldin (Helwan Linux)
+Integrated into Exodia OS by the Exodia Team
 
 **Happy installing!**
