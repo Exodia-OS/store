@@ -33,4 +33,5 @@ The Exodia Store is a **GUI (Graphical User Interface) package manager**. Its pr
 ---
 Developed by Exodia Team  
 Contributed by Saeed Badreldin (Helwan Linux)
+
 **Happy installing!**
