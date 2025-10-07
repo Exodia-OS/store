@@ -39,7 +39,7 @@ package() {
   # تثبيت ملف .desktop
   install -d "$pkgdir/usr/share/applications"
   # تأكد من أن ملف .desktop موجود في نفس الدليل الحالي (hel-store)
-  install -m644 helwan-store.desktop "$pkgdir/usr/share/applications/"
+  install -m644 Exodia-store.desktop "$pkgdir/usr/share/applications/"
 
   # تثبيت الأيقونات
   install -d "$pkgdir/usr/share/icons/hicolor/scalable/apps/"
