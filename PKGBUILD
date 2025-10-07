@@ -9,7 +9,7 @@ license=('GPL3') # تأكد من أن هذا هو الترخيص الصحيح ل
 depends=('electron' 'gtk3' 'libappindicator-gtk3' 'nss' 'alsa-lib' 'libxtst') # تبعيات Electron الأساسية، قد تحتاج للمزيد
 makedepends=('npm' 'git') # نحتاج npm للبناء و git للاستنساج
 
-source=("$pkgname::git+$url.git#branch=main") # افترض أن الفرع الرئيسي هو "main"
+source=("$pkgname::git+$url.git#branch=master")
 sha256sums=('SKIP') # استخدم SKIP مؤقتًا لتطوير Git، أو قم بإنشاء sums حقيقية لإصدار ثابت
 
 build() {
@@ -46,4 +46,3 @@ package() {
   # تأكد من أن مسار الأيقونة صحيح من الدليل الحالي (hel-store)
   install -m644 assets/icons/app_icon.png "$pkgdir/usr/share/icons/hicolor/scalable/apps/$pkgname.png"
 }
-
