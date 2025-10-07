@@ -445,8 +445,8 @@ window.addEventListener('DOMContentLoaded', async () => {
 ">
   <h2 style="margin-top: 0; color: #007bff;">About</h2>
   <p style="margin: 10px 0;">Exodia OS Store v1.0</p>
-  <p style="margin: 10px 0;">Developed by Exodia Team</p>
-  <p style="margin: 10px 0;">Contributed by Helwan Linux</p>
+  <p style="margin: 10px 0;">Developed by Saeed Badreldin (Helwan Linux)</p>
+  <p style="margin: 10px 0;">Integrated into Exodia OS by the Exodia Team</p>
   <button id="closeAboutBtn" class="category-button" style="margin-top: 15px;">Close</button>
 </div>
 
