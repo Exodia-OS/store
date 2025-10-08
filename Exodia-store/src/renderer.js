@@ -16,6 +16,11 @@ window.addEventListener('DOMContentLoaded', async () => {
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('progressText');
 
+    // New About button and modal elements
+    const aboutBtn = document.getElementById('aboutBtn');
+    const aboutModal = document.getElementById('aboutModal');
+    const closeAboutModal = document.getElementById('closeAboutModal');
+
 
     let allPackages = [];
     let filteredPackages = [];
@@ -423,8 +428,23 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Modified to use the new `updateSystem` IPC handler
     applyUpdatesBtn.addEventListener('click', applySystemUpdates);
 
+    // Event listeners for About button and modal (New)
+    aboutBtn.addEventListener('click', () => {
+        aboutModal.style.display = 'block'; // Show the modal
+    });
+
+    closeAboutModal.addEventListener('click', () => {
+        aboutModal.style.display = 'none'; // Close the modal
+    });
+
+    // Close the modal if the user clicks anywhere outside of the modal content
+    window.addEventListener('click', (event) => {
+        if (event.target === aboutModal) {
+            aboutModal.style.display = 'none';
+        }
+    });
+
 
     // Initial package load when the DOM content is loaded
     loadInitialPackages();
 });
-

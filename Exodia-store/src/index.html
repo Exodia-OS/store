@@ -342,6 +342,7 @@
       </select>
     </div>
     <button id="checkUpdatesBtn" class="category-button">Check for System Updates</button>
+    <button id="aboutBtn" class="category-button">About</button>
   </div>
 
   <div id="updateInfoSection">
@@ -366,6 +367,41 @@
     <span id="progressText">0%</span>
   </div>
 
+  <div id="aboutModal" style="
+      display: none; 
+      position: fixed; 
+      z-index: 2000; 
+      left: 0; 
+      top: 0; 
+      width: 100%; 
+      height: 100%; 
+      overflow: auto; 
+      background-color: rgba(0,0,0,0.4); 
+      padding-top: 60px;">
+    <div id="aboutContent" style="
+        background-color: #fefefe;
+        margin: 5% auto; 
+        padding: 20px;
+        border: 1px solid #888;
+        width: 80%; 
+        max-width: 500px;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.3);">
+      <span id="closeAboutModal" style="
+          color: #aaa;
+          float: right;
+          font-size: 28px;
+          font-weight: bold;
+          cursor: pointer;">&times;</span>
+      <h2>About Exodia Store</h2>
+      <p><strong>Application Name:</strong> Exodia Store</p>
+      <p><strong>Description:</strong> A graphical package manager for Exodia OS (based on Arch), allowing easy installation, removal, and system updates for Arch, Exodia, and AUR repositories.</p>
+      <p><strong>Version:</strong> 1.0.0 (Example)</p>
+      <p><strong>Developer:</strong> By Saeed Badrelden </p>
+      <p><strong>Developer:</strong> helwanlinux@gmail.com </p>
+      <p>This application simplifies package management for Arch-based systems.</p>
+    </div>
+  </div>
   <script src="renderer.js"></script>
 </body>
 </html>
