@@ -455,15 +455,15 @@ ipcMain.handle('update-system', async (event) => {
         if (Notification.isSupported()) {
             new Notification({
                 title: 'Exodia Store',
-                body: 'Udated !',
+                body: 'تم تحديث النظام بنجاح!',
                 icon: path.join(__dirname, 'assets', 'icons', 'app_icon.png')
             }).show();
         }
     } else {
         if (Notification.isSupported()) {
             new Notification({
-                title: 'exodia Store - Error',
-                body: 'Faid ' + (result.message || 'Unkown Error'),
+                title: 'Exodia Store - خطأ',
+                body: 'فشل تحديث النظام: ' + (result.message || 'خطأ غير معروف'),
                 icon: path.join(__dirname, 'assets', 'icons', 'app_icon.png')
             }).show();
         }

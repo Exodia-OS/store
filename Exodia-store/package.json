@@ -1,7 +1,7 @@
 {
-  "name": "exodia-store",
+  "name": "Exodia-store",
   "version": "2.0.0",
-  "description": "Simple graphical package manager for exodia Linux (Arch-based)",
+  "description": "Simple graphical package manager for Exodia Linux (Arch-based)",
   "main": "main.js",
   "scripts": {
     "start": "electron .",

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Name=Exodia Store
+Comment=Simple graphical package manager for Exodia Linux (Arch-based)
+Exec=/usr/bin/electron /opt/exodia-store
+Icon=/opt/exodia-store/assets/icons/app_icon.png
+Terminal=false
+Type=Application
+Categories=Utility;System;PackageManager;
+StartupWMClass=exodia-store
+X-GNOME-Autostart-enabled=true
+Name[en_US]=exodia-store.desktop
+
