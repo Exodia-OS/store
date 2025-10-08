@@ -53,6 +53,10 @@ function createWindow() {
 
 // Event handler: Called when Electron is ready to create browser windows.
 app.whenReady().then(() => {
+    // *** التعديل هنا لإزالة قائمة Electron الرئيسية ***
+    Menu.setApplicationMenu(null); 
+    // **********************************************
+    
     // إضافة جديدة: تحقق من علامة بدء التشغيل المخفي
     const shouldStartHidden = process.argv.includes('--start-hidden');
 
@@ -262,7 +266,8 @@ ipcMain.handle('fetch-all-packages', async () => {
         });
         console.log(`Parsed ${yayLines.length} yay lines.`);
     } else {
-        console.warn('Failed to fetch AUR packages (yay might not be installed or command failed):', yayResult.message);
+        // هذه الرسالة هي التي تظهر إذا فشل yay
+        console.warn('Failed to fetch AUR packages (yay might not be installed or command failed):', yayResult.message); 
     }
 
     // Deduplicate packages based on name. If a package exists in both pacman and yay output,
