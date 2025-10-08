@@ -245,16 +245,16 @@ window.addEventListener('DOMContentLoaded', async () => {
         const selectedCategory = categorySelect.value;
         const selectedRepoFilter = repoFilterSelect.value;
 
-        // Filter by repository source (Arch, Exodia, AUR)
+        // Filter by repository source (Arch, Helwan, AUR)
         if (selectedRepoFilter !== 'all') {
             packagesToProcess = packagesToProcess.filter(pkg => {
                 if (selectedRepoFilter === 'Arch') {
                     const archRepos = ['core', 'extra', 'community', 'multilib', 'testing', 'kde-unstable', 'gnome-unstable'];
                     // Checks if source is 'Arch' and repo is one of the common Arch repos
                     return pkg.source === 'Arch' && archRepos.includes(pkg.repo);
-                } else if (selectedRepoFilter === 'exodia') {
-                    // Specific check for 'Exodia' repository
-                    return pkg.repo === 'exodia';
+                } else if (selectedRepoFilter === 'Exodia') {
+                    // Specific check for 'helwan' repository
+                    return pkg.repo === 'exodia-repo';
                 } else if (selectedRepoFilter === 'AUR') {
                     // Check for packages from AUR
                     return pkg.source === 'AUR';
@@ -427,40 +427,4 @@ window.addEventListener('DOMContentLoaded', async () => {
     // Initial package load when the DOM content is loaded
     loadInitialPackages();
 });
-
-<!-- About Dialog -->
-<div id="aboutDialog" style="
-  display: none;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background: white;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-  text-align: center;
-  z-index: 2000;
-  width: 300px;
-">
-  <h2 style="margin-top: 0; color: #007bff;">About</h2>
-  <p style="margin: 10px 0;">Exodia OS Store v1.0</p>
-  <p style="margin: 10px 0;">Developed by Saeed Badreldin (Helwan Linux)</p>
-  <p style="margin: 10px 0;">Integrated into Exodia OS by the Exodia Team</p>
-  <button id="closeAboutBtn" class="category-button" style="margin-top: 15px;">Close</button>
-</div>
-
-<script>
-  const aboutBtn = document.getElementById('aboutBtn');
-  const aboutDialog = document.getElementById('aboutDialog');
-  const closeAboutBtn = document.getElementById('closeAboutBtn');
-
-  aboutBtn.addEventListener('click', () => {
-    aboutDialog.style.display = 'block';
-  });
-
-  closeAboutBtn.addEventListener('click', () => {
-    aboutDialog.style.display = 'none';
-  });
-</script>
 

@@ -6,58 +6,15 @@
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';">
   <link rel="icon" type="image/png" href="assets/icons/app_icon.png"> 
   <style>
-   
-   
-   body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  height: 100vh;
-  color: #fff;
-  background: radial-gradient(circle at center, #0099ff 0%, #003366 100%);
-  background-size: cover;
-  overflow: hidden;
-  position: relative;
-	}
-
-	/* تموجات الماء */
-	body::before, body::after {
-	  content: "";
-	  position: absolute;
-	  top: -50%;
-	  left: -50%;
-	  width: 200%;
-	  height: 200%;
-	  background-repeat: no-repeat;
-	  background-position: center;
-	  background-size: 50% 50%;
-	  opacity: 0.3;
-	  animation: ripple 12s infinite linear;
-	  background-image: 
-		radial-gradient(circle at 50% 50%, rgba(255,255,255,0.15) 0%, transparent 60%),
-		radial-gradient(circle at 20% 80%, rgba(255,255,255,0.1) 0%, transparent 60%);
-	}
-
-	body::after {
-	  animation-delay: 6s;
-	  opacity: 0.2;
-	}
-
-	/* حركة التموج */
-	@keyframes ripple {
-	  0% {
-		transform: translate(0, 0) scale(1);
-	  }
-	  50% {
-		transform: translate(5%, 5%) scale(1.1);
-	  }
-	  100% {
-		transform: translate(0, 0) scale(1);
-	  }
-	}
-
-
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      background: #f0f2f5;
+      display: flex;
+      flex-direction: column;
+      height: 100vh;
+      color: #333;
+    }
     h1 {
       text-align: center;
       padding: 1em;
@@ -385,8 +342,6 @@
       </select>
     </div>
     <button id="checkUpdatesBtn" class="category-button">Check for System Updates</button>
-    <button id="aboutBtn" class="category-button">About</button>
-
   </div>
 
   <div id="updateInfoSection">
